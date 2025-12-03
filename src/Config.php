@@ -23,15 +23,14 @@ class Config
      * @param string $webhookUrl 通知地址
      */
     public function __construct(
-        public int    $partnerId,
+        public int $partnerId,
         public string $clientId,
         public string $secretKey,
         public string $hmacKey,
         public string $aesKey,
         public string $webhookUrl,
         public string $environment = 'prod',
-    )
-    {
+    ) {
     }
 
     public static function from(array $config): Config
