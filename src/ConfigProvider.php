@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Whalet;
 
 class ConfigProvider
@@ -17,15 +18,8 @@ class ConfigProvider
     {
         return [
             'dependencies' => [
-            ],
-            'commands' => [
-            ],
-            'annotations' => [
-                'scan' => [
-                    'paths' => [
-                        __DIR__,
-                    ],
-                ],
+                ClientInterface::class => ClientFactory::class,
+                Whalet::class => ClientFactory::class,
             ],
         ];
     }
